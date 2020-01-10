@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
+    <style>
+        body{
+  line-height:1.8em;
+  width:750px;
+}
+.history-tl-container{
+  font-family: 'Barlow Condensed'; 
+  width:100%;
+  margin:left;
+  display:block;
+  position:relative;
+}
+.history-tl-container ul.tl{
+    margin:40px 0;
+    padding:0;
+    display:inline-block;
+
+}
+.history-tl-container ul.tl li{
+    list-style: none;
+    margin:auto;
+    margin-left:200px;
+    min-height:70px;
+    /*background: rgba(255,255,0,0.1);*/
+    border-left:1px solid blue;
+    padding:0 0 50px 30px;
+    position:relative;
+}
+.history-tl-container ul.tl li:last-child{ border-left:0;}
+.history-tl-container ul.tl li::before{
+    position: absolute;
+    left: -18px;
+    top: -5px;
+    content: " ";
+    border: 8px solid #33caea;
+    border-radius: 500%;
+    background: blue;
+    height: 20px;
+    width: 20px;
+    transition: all 500ms ease-in-out;
+
+}
+.history-tl-container ul.tl li:hover::before{
+    border-color:  black;
+    transition: all 1000ms ease-in-out;
+}
+ul.tl li .item-title{
+  font-size: 19px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  font-weight: 300;
+  font-style: italic;
+}
+ul.tl li .item-detail{
+    color:rgba(0,0,0,0.5);
+    font-size:25px;
+}
+ul.tl li .timestamp{
+    color: #22281B;
+    position: absolute;
+    width:100px;
+    left: -50%;
+    text-align: right;
+    font-size: 20px;
+}
+    </style>
+</head>
+<body>
+        <div class="history-tl-container">
+                <ul class="tl">
+                  <li class="tl-item" ng-repeat="item in retailer_history">
+                    <div class="timestamp"><b>14th May</b><br>Thursday</div>
+                    <div class="item-title">DAY 1</div>
+					<div class="item-detail">09.00 Arrival</div>
+					<div class="item-detail">09.30 Transfer to the Port</di>
+                    <div class="item-detail">10.00 to 15.00 Catamaran sailing activity - lunch on board</div>
+					<div class="item-detail">15.30 Free time</div>
+					<div class="item-detail">19.30 Welcome drink at the hotel terrace</div>
+					<div class="item-detail">20.00 Transfer to the restaurant</div>
+					<div class="item-detail">20.30 Dinner at Restaurant Nautico</div>
+
+                  </li>
+
+                  <li class="tl-item" ng-repeat="item in retailer_history">
+                    <div class="timestamp"><b>15th May </b><br> Friday</div>
+                    <div class="item-title"> DAY 2</div>
+                    <div class="item-detail">07:30 Breakfast at the hotel</div>
+					<div class="item-detail">08:30 to 10.30 Professional visit</div>
+					<div class="item-detail">10:30 Free time</div>
+					<div class="item-detail">13:00 Lunch at restaurant Caballito de Mar</div>
+					<div class="item-detail">15:00 Transfer to the hotel</div>
+                    <div class="item-detail">15:30 Free time</div>
+                    <div class="item-detail">19:30 Transfer to dinner</div>
+                    <div class="item-detail">20:00 Dinner and Party</div>
+                  </li>
+
+                  <li class="tl-item" ng-repeat="item in retailer_history">
+                    <div class="timestamp"><b>16th May</b><br> Saturday</div>
+                    <div class="item-title"> DAY 3</div>
+                    <div class="item-detail">07.30 Transfer to the Airport</div>
+                    <div class="item-detail">09.55 Departure</div>
+					<div class="item-detail">END OF PROGRAMME</div>
+                  </li>
+                </ul>
+
+
+
+        </div>
+</body>
+</html>
